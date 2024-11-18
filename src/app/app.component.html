@@ -1,0 +1,43 @@
+<div class="total_wrap">
+  <section class="swiper_class">
+    
+    <swiper [config]="swiperConfig" class="swiper-container">
+      <ng-template swiperSlide *ngFor="let card of cards"> 
+        <div class="card" [ngStyle]="{'backgroundColor': card.color}">
+          <!-- <div class="card-inner"> -->
+            <img src={{card.smallImageURL}} alt="{{ card.commonName }}" />
+          <!-- </div> -->
+          <div class="card-content">
+            <h3>{{card.skuId}}</h3>
+            <h2>{{card.commonName}}</h2>
+            <p>{{ card.shortDescription }}</p>
+          </div>
+
+        </div>
+        <!-- <ng-template swiperSlide *ngFor="let product of productList">
+            <div class="procard-outer" >
+              <div class="procard-outer-img-top" >
+                <div class="image"  [ngStyle]="{'backgroundColor': product.color}">
+                  <img class="img-fluid" src={{product.smallImageURL}}  alt="productimage">
+                    <div class="image-title">
+                      <p class="procardinner-title">{{product.commonName}}</p>
+                    </div>
+                </div>
+                  </div>
+                <div class="procardouter-body">
+                      <p class="procardHeadText"><ng-container *ngIf ="product.category === 'C001'; then biochemical;"></ng-container>
+                                      <ng-container *ngIf ="product.category === 'C002'; then Natural;"></ng-container>
+                                      <ng-container *ngIf ="product.category === 'C003'; then Excipients;"></ng-container>
+
+                                      <ng-template #biochemical> <p>Category: Biochemical Products</p> </ng-template>
+                                      <ng-template #Natural> <p>Category: Natural Extracts</p> </ng-template>
+                                      <ng-template #Excipients> <p>Category: Excipients</p> </ng-template>    
+                                  </p>
+                      <p class="procardContent" >{{product.shortDescription}}</p>
+                  </div>
+              </div>
+          </div> -->
+      </ng-template>
+    </swiper>
+  </section>
+</div>

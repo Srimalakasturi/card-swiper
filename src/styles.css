@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+/* styles.css */
+/* @import 'swiper/css/swiper.css'; */
+.total_wrap{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between
+}
